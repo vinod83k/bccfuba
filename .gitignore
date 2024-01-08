@@ -1,6 +1,5 @@
 
-BccFubaSolution/.vs/*.*
+BccFubaSolution/.vs/*
 /BccFubaSolution/BccFuba/bin/*
 /BccFubaSolution/BccFuba/obj/*
 *.user
-/BccFubaSolution/.vs/BccFubaSolution
