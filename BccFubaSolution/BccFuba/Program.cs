@@ -1,4 +1,4 @@
-namespace StaticHtmlProject
+namespace BccFuba
 {
     public class Program
     {

@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BccFuba.Pages
+namespace BccFuba.Pages.Products
 {
-    public class CareerModel : PageModel
+    public class MultilayerPcbModel : PageModel
     {
         public void OnGet()
         {

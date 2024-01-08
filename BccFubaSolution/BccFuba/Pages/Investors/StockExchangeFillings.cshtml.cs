@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BccFuba.Pages
+namespace BccFuba.Pages.Investors
 {
-    public class CareerModel : PageModel
+    public class StockExchangeFillingsModel : PageModel
     {
         public void OnGet()
         {
