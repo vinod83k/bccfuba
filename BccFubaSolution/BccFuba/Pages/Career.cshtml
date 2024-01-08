@@ -1,0 +1,48 @@
+﻿@page
+@model StaticHtmlProject.Pages.CareerModel
+@{
+    ViewData["Title"] = "BCC Fuba";
+    ViewData["PageTitle"] = "Career";
+}
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+            <h6 class="section-title bg-white text-center text-primary px-3">Join Out Team!</h6>
+            <h1 class="display-6 mb-4">Fill in details below.</h1>
+        </div>
+
+
+        <div class="row g-5">
+            <div class="col-lg-12 wow slideInUp" data-wow-delay="0.3s">
+                <form>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input id="firstName" type="text" class="form-control border-0 bg-light px-4" placeholder="First Name" style="height: 55px;">
+                        </div>
+                        <div class="col-md-6">
+                            <input id="lastName" type="text" class="form-control border-0 bg-light px-4" placeholder="Last Name" style="height: 55px;">
+                        </div>
+                        <div class="col-md-6">
+                            <input id="phoneNumber" type="text" class="form-control border-0 bg-light px-4" placeholder="Phone Number" style="height: 55px;">
+                        </div>
+                        <div class="col-md-6">
+                            <input id="emailAddress" type="email" class="form-control border-0 bg-light px-4" placeholder="Email ID" style="height: 55px;">
+                        </div>
+                        <div class="col-12">
+                            <input id="fileInput" type="file" class="form-control border-0 bg-light px-4" placeholder="" style="line-height: 40px;">
+                            Accepted file type: docx, doc, pdf
+                        </div>
+                        <div class="col-12">
+                            <Textarea id="messageInput" class="form-control border-0 bg-light px-4" placeholder="Your Message" style="height: 200px;"></Textarea>
+                        </div>
+                        <div class="col-12">
+                            <button onclick="uploadFile()" class="btn btn-primary w-100 py-3" type="button">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
