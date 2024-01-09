@@ -1,3 +1,8 @@
+using BccFuba.Models;
+using BccFuba.Services;
+using Microsoft.Extensions.Configuration;
+using System.Configuration;
+
 namespace BccFuba
 {
     public class Program
@@ -8,6 +13,8 @@ namespace BccFuba
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));
+            builder.Services.AddTransient<IEmailService, EmailService>();
 
             var app = builder.Build();
 

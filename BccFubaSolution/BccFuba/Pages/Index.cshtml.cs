@@ -14,7 +14,7 @@ namespace BccFuba.Pages
 
         public void OnGet()
         {
-
+            ViewData["PageTitle"] = "Index";
         }
     }
 }
