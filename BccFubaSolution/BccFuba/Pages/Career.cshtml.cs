@@ -1,53 +1,44 @@
-using BccFuba.Models;
-using BccFuba.Services;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Options;
-
-namespace BccFuba.Pages
+namespace BccFuba.Pages;
+public class CareerModel : PageModel
 {
-    public class CareerModel : PageModel
+    private readonly IEmailService _emailService;
+    private readonly EmailSettings _emailSettings;
+
+    public CareerModel(IEmailService emailService, IOptions<EmailSettings> emailSettings)
     {
-        private readonly IEmailService _emailService;
-        private readonly EmailSettings _emailSettings;
+        _emailService = emailService;
+        _emailSettings = emailSettings.Value;
+    }
 
-        public CareerModel(IEmailService emailService, IOptions<EmailSettings> emailSettings)
+    [BindProperty]
+    public CareerForm CareerForm { get; set; }
+
+    public void OnGet()
+    {
+    }
+
+    public async Task<IActionResult> OnPost()
+    {
+        if (!ModelState.IsValid)
         {
-            _emailService = emailService;
-            _emailSettings = emailSettings.Value;
+            return Page(); // Return the page with validation errors if the model state is invalid
         }
 
-        [BindProperty]
-        public CareerForm CareerForm { get; set; }
+        const string subject = "Job Application";
 
-        public void OnGet()
-        {
-        }
+        var htmlContent = await System.IO.File.ReadAllTextAsync("EmailTemplates/ContactUs.html");
+        htmlContent = htmlContent.Replace("__FIRSTNAME__", CareerForm.FirstName);
+        htmlContent = htmlContent.Replace("__LASTNAME__", CareerForm.LastName);
+        htmlContent = htmlContent.Replace("__EMAIL__", CareerForm.Email);
+        htmlContent = htmlContent.Replace("__PHONENUMBER__", CareerForm.PhoneNumber);
+        htmlContent = htmlContent.Replace("__MESSAGE__", CareerForm.Message);
 
-        public async Task<IActionResult> OnPost()
-        {
-            if (!ModelState.IsValid)
-            {
-                return Page(); // Return the page with validation errors if the model state is invalid
-            }
+        var attachment = new FormFileCollection { CareerForm.File };
 
-            string subject = "Contact Us";
+        var message = new Message(new[] { _emailSettings.AdminToEmail }, subject, htmlContent, attachment);
+        await _emailService.SendEmailAsync(message);
 
-            var htmlContent = await System.IO.File.ReadAllTextAsync("EmailTemplates/ContactUs.html");
-            htmlContent = htmlContent.Replace("__FIRSTNAME__", CareerForm.FirstName);
-            htmlContent = htmlContent.Replace("__LASTNAME__", CareerForm.LastName);
-            htmlContent = htmlContent.Replace("__EMAIL__", CareerForm.Email);
-            htmlContent = htmlContent.Replace("__PHONENUMBER__", CareerForm.PhoneNumber);
-            htmlContent = htmlContent.Replace("__MESSAGE__", CareerForm.Message);
-
-            var attachment = new FormFileCollection();
-            attachment.Add(CareerForm.File);
-
-            var message = new Message(new[] { _emailSettings.AdminToEmail }, subject, htmlContent, attachment);
-            await _emailService.SendEmailAsync(message);
-
-            // Redirect to a thank you page or return a success message
-            return RedirectToPage("/ThankYou");
-        }
+        // Redirect to a thank you page or return a success message
+        return RedirectToPage("/ThankYou");
     }
 }

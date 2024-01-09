@@ -1,7 +1,5 @@
-﻿namespace BccFuba.Models
+﻿namespace BccFuba.Models;
+public class CareerForm : ContactForm
 {
-    public class CareerForm : ContactForm
-    {
-        public IFormFile File { get; set; }
-    }
+    public IFormFile File { get; set; }
 }
