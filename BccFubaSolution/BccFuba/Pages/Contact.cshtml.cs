@@ -11,7 +11,6 @@ namespace BccFuba.Pages
         private readonly IEmailService _emailService;
         private readonly EmailSettings _emailSettings;
 
-
         public ContactModel(IEmailService emailService, IOptions<EmailSettings> emailSettings)
         {
             _emailService = emailService;
