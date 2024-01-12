@@ -38,7 +38,8 @@ public class ContactModel : PageModel
         var message = new Message(new[] { _emailSettings.ContactUsToEmail }, subject, htmlContent);
         await _emailService.SendEmailAsync(message);
 
-        // Redirect to a thank you page or return a success message
-        return RedirectToPage("/ThankYou");
+        // return a success message
+        ViewData["ShowConfirmationMessage"] = true;
+        return Page();
     }
 }
