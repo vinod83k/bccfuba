@@ -35,7 +35,7 @@ public class CareerModel : PageModel
 
         var attachment = new FormFileCollection { CareerForm.File };
 
-        var message = new Message(new[] { _emailSettings.AdminToEmail }, subject, htmlContent, attachment);
+        var message = new Message(new[] { _emailSettings.CareersToEmail }, subject, htmlContent, attachment);
         await _emailService.SendEmailAsync(message);
 
         // Redirect to a thank you page or return a success message

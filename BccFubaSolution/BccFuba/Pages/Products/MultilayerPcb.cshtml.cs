@@ -1,12 +1,8 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+namespace BccFuba.Pages.Products;
 
-namespace BccFuba.Pages.Products
+public class MultilayerPcbModel : PageModel
 {
-    public class MultilayerPcbModel : PageModel
+    public void OnGet()
     {
-        public void OnGet()
-        {
-        }
     }
 }

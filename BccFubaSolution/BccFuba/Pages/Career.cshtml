@@ -1,7 +1,6 @@
 ﻿@page
 @model BccFuba.Pages.CareerModel
 @{
-    ViewData["Title"] = "BCC Fuba";
     ViewData["PageTitle"] = "Career";
 }
 
@@ -11,8 +10,12 @@
             <h6 class="section-title bg-white text-center text-primary px-3">Join Our Team!</h6>
             <h1 class="display-6 mb-4">Fill in details below</h1>
         </div>
-
-
+        <div class="row">
+            <div class="col-lg-12 wow slideInUp" data-wow-delay="0.1s">
+                <p>To see current openings please visit our <a href="https://www.linkedin.com/company/bcc-fuba-india-limited/" target="_blank">LinkedIn page.</a></p>
+            </div>
+        </div>
+        <br/>
         <div class="row g-5">
             <div class="col-lg-12 wow slideInUp" data-wow-delay="0.3s">
                 <form method="post" enctype="multipart/form-data">
@@ -34,7 +37,7 @@
                             Accepted file type: docx, doc, pdf
                         </div>
                         <div class="col-12 form-group">
-                            <Textarea id="messageInput" name="Message" class="form-control border-0 bg-light px-4" placeholder="Your Message" style="height: 200px;" required></Textarea>
+                            <Textarea id="message" name="Message" class="form-control border-0 bg-light px-4" placeholder="Your Message" style="height: 200px;" required></Textarea>
                         </div>
                         <div class="col-12">
                             <button class="btn btn-primary w-100 py-3" type="submit">Submit</button>
@@ -45,4 +48,3 @@
         </div>
     </div>
 </div>
-

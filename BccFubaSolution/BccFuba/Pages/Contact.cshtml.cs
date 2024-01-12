@@ -35,7 +35,7 @@ public class ContactModel : PageModel
         htmlContent = htmlContent.Replace("__MESSAGE__", ContactForm.Message);
 
 
-        var message = new Message(new[] { _emailSettings.AdminToEmail }, subject, htmlContent);
+        var message = new Message(new[] { _emailSettings.ContactUsToEmail }, subject, htmlContent);
         await _emailService.SendEmailAsync(message);
 
         // Redirect to a thank you page or return a success message

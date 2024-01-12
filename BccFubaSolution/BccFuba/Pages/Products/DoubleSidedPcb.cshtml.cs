@@ -1,12 +1,8 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+namespace BccFuba.Pages.Products;
 
-namespace BccFuba.Pages.Products
+public class DoubleSidedPcbModel : PageModel
 {
-    public class DoubleSidedPcbModel : PageModel
+    public void OnGet()
     {
-        public void OnGet()
-        {
-        }
     }
 }

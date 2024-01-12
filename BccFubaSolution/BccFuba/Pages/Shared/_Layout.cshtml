@@ -32,41 +32,45 @@
 </head>
 <body>
     <!-- Brand & Contact Start -->
-    <div class="container-fluid py-2 px-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="row align-items-center top-bar">
-            <div class="col-lg-6 col-md-12 text-lg-start">
-                <a href="/Index" class="navbar-brand m-0 p-0">
-                    <img src="~/img/logo.png" alt="Logo">
-                </a>
-            </div>
-            <div class="col-lg-6 col-md-7 d-none d-lg-block">
-                <div class="row">
-                    <div class="col-6">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <div class="flex-shrink-0 btn-lg-square border rounded-circle">
-                                <i class="fa fa-phone text-primary"></i>
-                            </div>
-                            <div class="ps-3">
-                                <p class="mb-2">Call Us</p>
-                                <h6 class="mb-0">+91 11 4928 7223</h6>
-                            </div>
+<div class="container-fluid py-2 px-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="row align-items-center top-bar">
+        <div class="col-lg-2 col-md-12 text-lg-start">
+            <a href="/Index" class="navbar-brand m-0 p-0">
+                <img src="~/img/logo.png" alt="BCC Fuba India Limited">
+            </a>
+        </div>
+        <div class="col-lg-10 col-md-7 d-none d-lg-block">
+            <div class="row ">
+                <div class="col-4 pt-1">
+                        <img src="~/img/name.png" alt="BCC Fuba India Limited" width="100%">
+                </div>
+                    
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <div class="flex-shrink-0 btn-lg-square border rounded-circle">
+                            <i class="fa fa-phone text-primary"></i>
+                        </div>
+                        <div class="ps-3">
+                            <p class="mb-2">Call Us</p>
+                            <h6 class="mb-0">+91 11 4928 7223</h6>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <div class="flex-shrink-0 btn-lg-square border rounded-circle">
-                                <i class="far fa-envelope text-primary"></i>
-                            </div>
-                            <div class="ps-3">
-                                <p class="mb-2">Email Us</p>
-                                <h6 class="mb-0"><a href="mailto:marketing@bccfuba.com" style="color:#000000">marketing@bccfuba.com</a></h6>
-                            </div>
+                </div>
+                <div class="col-4">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <div class="flex-shrink-0 btn-lg-square border rounded-circle">
+                            <i class="far fa-envelope text-primary"></i>
+                        </div>
+                        <div class="ps-3">
+                            <p class="mb-2">Email Us</p>
+                            <h6 class="mb-0"><a href="mailto:marketing@bccfuba.com" style="color:#000000">marketing@bccfuba.com</a></h6>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
     <!-- Brand & Contact End -->
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
@@ -85,7 +89,7 @@
                         <a href="/AboutUs/BoardOfDirectors" class="dropdown-item">Board of Directors</a>
                         <a href="/AboutUs/VisionAndMission" class="dropdown-item">Vision & Mission</a>
                         <a href="/AboutUs/Sustainability" class="dropdown-item">Sustainability</a>
-                        <a href="/AboutUs/Certifications" class="dropdown-item">Certifications</a>
+                        @*<a href="/AboutUs/Certifications" class="dropdown-item">Certifications</a>*@
                     </div>
                 </div>
 
@@ -99,6 +103,13 @@
                         <a href="/Products/SingleSidedPcb" class="dropdown-item">Single Sided PCBs</a>
                     </div>
                 </div>
+                
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle @(Context.Request.Path.StartsWithSegments("/Technologies") ? "active" : "")" data-bs-toggle="dropdown">Technologies</a>
+                    <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="/Technologies/Certifications" class="dropdown-item">Certifications</a>
+                    </div>
+                </div>
 
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle @(Context.Request.Path.StartsWithSegments("/Investors") ? "active" : "")" data-bs-toggle="dropdown">Investors</a>
@@ -107,7 +118,6 @@
                         <a href="/Investors/AnnualReports" class="dropdown-item">Annual Reports</a>
                         <a href="/Investors/StockExchangeFillings" class="dropdown-item">Stock Exchange Fillings</a>
                         <a href="/Investors/Policies" class="dropdown-item">Policies</a>
-                        <a href="/Investors/Miscellaneous" class="dropdown-item">Miscellaneous</a>
                     </div>
                 </div>
 
@@ -183,7 +193,7 @@
                         <!-- <a class="btn btn-square btn-outline-secondary rounded-circle me-1" href="#"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-square btn-outline-secondary rounded-circle me-1" href="#"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-square btn-outline-secondary rounded-circle me-1" href="#"><i class="fab fa-youtube"></i></a> -->
-                        <a class="btn btn-primary  w-30 px-5" target="_blank" href="https://www.linkedin.com/company/bcc-fuba-india-limited/">Linked <i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-1" target="_blank" href="https://www.linkedin.com/company/bcc-fuba-india-limited/"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -250,11 +260,6 @@
                 return false;
             }
 
-            //if (!isValidEmail(emailAddressInput.value)) {
-            //    alert('Invalid Email Address');
-            //    return false;
-            //}
-
             const file = fileInput.files[0];
             const formData = new FormData();
             formData.append('file', file);
@@ -271,7 +276,6 @@
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    //alert('File upload failed.');
                 });
         }
     </script>

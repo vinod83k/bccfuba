@@ -1,9 +1,6 @@
-﻿using BccFuba.Models;
+﻿namespace BccFuba.Services;
 
-namespace BccFuba.Services
+public interface IEmailService
 {
-    public interface IEmailService
-    {
-        Task SendEmailAsync(Message message);
-    }
+    Task SendEmailAsync(Message message);
 }

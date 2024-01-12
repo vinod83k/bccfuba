@@ -1,12 +1,8 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+namespace BccFuba.Pages.AboutUs;
 
-namespace BccFuba.Pages.AboutUs
+public class BoardOfDirectorsModel : PageModel
 {
-    public class BoardOfDirectorsModel : PageModel
+    public void OnGet()
     {
-        public void OnGet()
-        {
-        }
     }
 }

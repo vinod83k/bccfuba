@@ -1,12 +1,8 @@
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+namespace BccFuba.Pages.Products;
 
-namespace BccFuba.Pages.Products
+public class MetalCorePcbModel : PageModel
 {
-    public class MetalCorePcbModel : PageModel
+    public void OnGet()
     {
-        public void OnGet()
-        {
-        }
     }
 }
