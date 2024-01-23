@@ -26,7 +26,7 @@ public class CareerModel : PageModel
 
         const string subject = "Job Application";
 
-        var htmlContent = await System.IO.File.ReadAllTextAsync("EmailTemplates/ContactUs.html");
+        var htmlContent = await System.IO.File.ReadAllTextAsync("EmailTemplates/Career.html");
         htmlContent = htmlContent.Replace("__FIRSTNAME__", CareerForm.FirstName);
         htmlContent = htmlContent.Replace("__LASTNAME__", CareerForm.LastName);
         htmlContent = htmlContent.Replace("__EMAIL__", CareerForm.Email);
