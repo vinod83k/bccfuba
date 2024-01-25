@@ -5,6 +5,12 @@ public class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        // Build a config object, using env vars and JSON providers.
+        IConfiguration config = new ConfigurationBuilder()
+            .AddJsonFile($"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") ?? "Production"}.json", optional: true)
+            .AddEnvironmentVariables()
+            .Build();
+
         // Add services to the container.
         builder.Services.AddRazorPages();
         builder.Services.Configure<EmailSettings>(builder.Configuration.GetSection("EmailSettings"));

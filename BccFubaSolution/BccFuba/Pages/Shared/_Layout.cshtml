@@ -32,45 +32,45 @@
 </head>
 <body>
     <!-- Brand & Contact Start -->
-<div class="container-fluid py-2 px-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="row align-items-center top-bar">
-        <div class="col-lg-2 col-md-12 text-lg-start">
-            <a href="/Index" class="navbar-brand m-0 p-0">
-                <img src="~/img/logo.png" alt="BCC Fuba India Limited">
-            </a>
-        </div>
-        <div class="col-lg-10 col-md-7 d-none d-lg-block">
-            <div class="row ">
-                <div class="col-4 pt-1">
+    <div class="container-fluid py-2 px-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row align-items-center top-bar">
+            <div class="col-lg-2 col-md-12 text-lg-start">
+                <a href="/Index" class="navbar-brand m-0 p-0">
+                    <img src="~/img/logo.png" alt="BCC Fuba India Limited">
+                </a>
+            </div>
+            <div class="col-lg-10 col-md-7 d-none d-lg-block">
+                <div class="row ">
+                    <div class="col-4 pt-1">
                         <img src="~/img/name.png" alt="BCC Fuba India Limited" width="100%">
-                </div>
-                    
-                <div class="col-4">
-                    <div class="d-flex align-items-center justify-content-end">
-                        <div class="flex-shrink-0 btn-lg-square border rounded-circle">
-                            <i class="fa fa-phone text-primary"></i>
-                        </div>
-                        <div class="ps-3">
-                            <p class="mb-2">Call Us</p>
-                            <h6 class="mb-0">+91 11 4928 7223</h6>
+                    </div>
+
+                    <div class="col-4">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div class="flex-shrink-0 btn-lg-square border rounded-circle">
+                                <i class="fa fa-phone text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <p class="mb-2">Call Us</p>
+                                <h6 class="mb-0">+91 11 4928 7223</h6>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <div class="d-flex align-items-center justify-content-end">
-                        <div class="flex-shrink-0 btn-lg-square border rounded-circle">
-                            <i class="far fa-envelope text-primary"></i>
-                        </div>
-                        <div class="ps-3">
-                            <p class="mb-2">Email Us</p>
-                            <h6 class="mb-0"><a href="mailto:marketing@bccfuba.com" style="color:#000000">marketing@bccfuba.com</a></h6>
+                    <div class="col-4">
+                        <div class="d-flex align-items-center justify-content-end">
+                            <div class="flex-shrink-0 btn-lg-square border rounded-circle">
+                                <i class="far fa-envelope text-primary"></i>
+                            </div>
+                            <div class="ps-3">
+                                <p class="mb-2">Email Us</p>
+                                <h6 class="mb-0"><a href="mailto:marketing@bccfuba.com" style="color:#000000">marketing@bccfuba.com</a></h6>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
     <!-- Brand & Contact End -->
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark sticky-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
@@ -86,27 +86,31 @@
                     <a href="#" class="nav-link dropdown-toggle @(Context.Request.Path.StartsWithSegments("/AboutUs") ? "active" : "")" data-bs-toggle="dropdown">About Us</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
                         <a href="/AboutUs/Overview" class="dropdown-item">Overview</a>
-                        <a href="/AboutUs/BoardOfDirectors" class="dropdown-item">Board of Directors</a>
                         <a href="/AboutUs/VisionAndMission" class="dropdown-item">Vision & Mission</a>
+                        <a href="/AboutUs/BoardOfDirectors" class="dropdown-item">Board of Directors</a>
                         <a href="/AboutUs/Sustainability" class="dropdown-item">Sustainability</a>
-                        @*<a href="/AboutUs/Certifications" class="dropdown-item">Certifications</a>*@
                     </div>
                 </div>
 
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle @(Context.Request.Path.StartsWithSegments("/Products") ? "active" : "")" data-bs-toggle="dropdown">Products</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
-                        <a href="/Products/PcbOverview" class="dropdown-item">Oveview of PCBs</a>
-                        <a href="/Products/MultilayerPcb" class="dropdown-item">Multilayer PCBs</a>
-                        <a href="/Products/DoubleSidedPcb" class="dropdown-item">Double Sided PCBs</a>
-                        <a href="/Products/MetalCorePcb" class="dropdown-item">Metal Core PCBs</a>
+                        <a href="/Products/PcbOverview" class="dropdown-item">Overview of PCBs</a>
                         <a href="/Products/SingleSidedPcb" class="dropdown-item">Single Sided PCBs</a>
+                        <a href="/Products/DoubleSidedPcb" class="dropdown-item">Double Sided PCBs</a>
+                        <a href="/Products/MultilayerPcb" class="dropdown-item">Multilayer PCBs</a>
+                        <a href="/Products/MetalCorePcb" class="dropdown-item">Metal Core PCBs</a>
                     </div>
                 </div>
-                
+
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle @(Context.Request.Path.StartsWithSegments("/Technologies") ? "active" : "")" data-bs-toggle="dropdown">Technologies</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
+                        <a href="/Technologies/Overview" class="dropdown-item">Overview</a>
+                        <a href="/Technologies/SingleSide" class="dropdown-item">Single side</a>
+                        <a href="/Technologies/DoubleSide" class="dropdown-item">Double Side</a>
+                        <a href="/Technologies/Multilayer" class="dropdown-item">Multilayer</a>
+                        <a href="/Technologies/MetalCore" class="dropdown-item">Metal Core</a>
                         <a href="/Technologies/Certifications" class="dropdown-item">Certifications</a>
                     </div>
                 </div>
@@ -114,9 +118,10 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle @(Context.Request.Path.StartsWithSegments("/Investors") ? "active" : "")" data-bs-toggle="dropdown">Investors</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
-                        <a href="/Investors/FinancialReports" class="dropdown-item">Financial Reports</a>
                         <a href="/Investors/AnnualReports" class="dropdown-item">Annual Reports</a>
+                        <a href="/Investors/FinancialReports" class="dropdown-item">Financial Reports</a>
                         <a href="/Investors/StockExchangeFillings" class="dropdown-item">Stock Exchange Fillings</a>
+                        <a href="/Investors/SebiDisclosure" class="dropdown-item">Regulation 46 SEBI (LODR) 2015</a>
                         <a href="/Investors/Policies" class="dropdown-item">Policies</a>
                     </div>
                 </div>
@@ -128,58 +133,68 @@
         </div>
     </nav>
     <!-- Navbar End -->
-    @if (ViewData["PageTitle"] != null
-         && Convert.ToString(ViewData["PageTitle"]) != "Home page")
-    {
-        var pages = Convert.ToString(ViewData["PageTitle"])?.Split("/");
-        <!-- Page Header Start -->
-        
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s" style="@(Context.Request.Path == "/Index" || Context.Request.Path == "/" ? "display: none;" : "")">
-        <div class="container text-center py-5">
-                @{
-                    if (Convert.ToString(ViewData["PageTitle"])?.IndexOf("/") > 0)
-                    {   
-                        <h1 class="display-4 text-white animated slideInDown mb-3">@pages[pages.Length - 1]</h1>
+                @if (ViewData["PageTitle"] != null
+    && Convert.ToString(ViewData["PageTitle"]) != "Home page")
+                {
+                    var pages = Convert.ToString(ViewData["PageTitle"])?.Split("/");
+                    var pageHeaderClass = "container-fluid py-5 mb-5 wow fadeIn page-header";
+
+                    @if (ViewData["PageTitle"].ToString().Contains("About Us"))
+                    {
+                        pageHeaderClass = $"{pageHeaderClass} about-header";
                     }
                     else
                     {
-                        <h1 class="display-4 text-white animated slideInDown mb-3">@ViewData["PageTitle"]</h1>
+                        pageHeaderClass = $"{pageHeaderClass} common-header";
                     }
-                }
+
+        <!-- Page Header Start -->
+
+        <div class="@pageHeaderClass" data-wow-delay="0.1s">
+            <div class="container text-center py-5">
+                            @{
+                                if (Convert.ToString(ViewData["PageTitle"])?.IndexOf("/") > 0)
+                                {
+                        <h1 class="display-4 text-white animated slideInDown mb-3">@pages[pages.Length - 1]</h1>
+                                }
+                                else
+                                {
+                        <h1 class="display-4 text-white animated slideInDown mb-3">@ViewData["PageTitle"]</h1>
+                                }
+                            }
 
                 <nav aria-label="breadcrumb animated slideInDown">
                     <ol class="breadcrumb justify-content-center mb-0">
                         <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
-                        @{
-                            if (Convert.ToString(@ViewData["PageTitle"])?.IndexOf("/") > 0)
-                            {
-                                for (var i = 0; i < pages.Length; i++)
-                                {
-                                    if (i == pages.Length - 1)
-                                    {
+                                    @{
+                                        if (Convert.ToString(@ViewData["PageTitle"])?.IndexOf("/") > 0)
+                                        {
+                                            for (var i = 0; i < pages.Length; i++)
+                                            {
+                                                if (i == pages.Length - 1)
+                                                {
                                         <li class="breadcrumb-item text-primary active" aria-current="page">@pages[i]</li>
-                                    }
-                                    else
-                                    {
+                                                }
+                                                else
+                                                {
                                         <li class="breadcrumb-item"><a class="text-white" href="#">@pages[i]</a></li>
-                                    }
-                                }
-                            }
-                            else
-                            {
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
                                 <li class="breadcrumb-item text-primary active" aria-current="page">@ViewData["PageTitle"]</li>
-                            }
-                        }
+                                        }
+                                    }
                     </ol>
                 </nav>
             </div>
         </div>
         <!-- Page Header End -->
-    }
+                }
 
     <div>
-        @RenderBody()
+                @RenderBody()
     </div>
 
     <!-- Footer Start -->
@@ -233,53 +248,9 @@
     <script src="~/lib/waypoints/waypoints.min.js"></script>
     <script src="~/lib/counterup/counterup.min.js"></script>
     <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="~/lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="~/js/main.js"></script>
-    <script>
-
-        function uploadFile() {
-            const fileInput = document.getElementById('fileInput');
-            const firstNameInput = document.getElementById('firstName');
-            const lastNameInput = document.getElementById('lastName');
-            const phoneNumberInput = document.getElementById('phoneNumber');
-            const emailAddressInput = document.getElementById('emailAddress');
-            const messageInput = document.getElementById('messageInput');
-
-            const careersAdditionalData = {
-                "firstName": firstNameInput.value,
-                "lastName": lastNameInput.value,
-                "phoneNumber": phoneNumberInput.value,
-                "emailAddress": emailAddressInput.value,
-                "message": messageInput.value
-            };
-
-            if (fileInput.files.length === 0) {
-                alert('Please select a file.');
-                return false;
-            }
-
-            const file = fileInput.files[0];
-            const formData = new FormData();
-            formData.append('file', file);
-            formData.append('careersAdditionalData', JSON.stringify(careersAdditionalData));
-
-            fetch('http://localhost:5000/api/careers', {
-                method: 'POST',
-                body: formData
-            })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    alert(data);
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        }
-    </script>
-
+<script src="~/lib/lightbox/js/lightbox.min.js"></script>
+<!-- Template Javascript -->
+<script src="~/js/main.js"></script>
         @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
