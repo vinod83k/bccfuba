@@ -21,4 +21,30 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\annual_reports\" />
+    <Folder Include="wwwroot\Certificate\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\financial_reports\2021-22\" />
+    <Folder Include="wwwroot\financial_reports\2022-23\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\lib\animate\" />
+    <Folder Include="wwwroot\lib\counterup\" />
+    <Folder Include="wwwroot\lib\easing\" />
+    <Folder Include="wwwroot\lib\lightbox\css\" />
+    <Folder Include="wwwroot\lib\lightbox\images\" />
+    <Folder Include="wwwroot\lib\lightbox\js\" />
+    <Folder Include="wwwroot\lib\owlcarousel\assets\" />
+    <Folder Include="wwwroot\lib\waypoints\" />
+    <Folder Include="wwwroot\lib\wow\" />
+    <Folder Include="wwwroot\policies\" />
+    <Folder Include="wwwroot\scss\bootstrap\scss\forms\" />
+    <Folder Include="wwwroot\scss\bootstrap\scss\helpers\" />
+    <Folder Include="wwwroot\scss\bootstrap\scss\mixins\" />
+    <Folder Include="wwwroot\scss\bootstrap\scss\utilities\" />
+    <Folder Include="wwwroot\scss\bootstrap\scss\vendor\" />
+    <Folder Include="wwwroot\stock_exchange_fillings\2022-23\" />
+    <Folder Include="wwwroot\stock_exchange_fillings\2023-24\" />
+  </ItemGroup>
+
 </Project>
