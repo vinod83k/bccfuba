@@ -95,11 +95,11 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle @(Context.Request.Path.StartsWithSegments("/Products") ? "active" : "")" data-bs-toggle="dropdown">Products</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
-                        <a href="/Products/PcbOverview" class="dropdown-item">Overview of PCBs</a>
-                        <a href="/Products/SingleSidedPcb" class="dropdown-item">Single Sided PCBs</a>
-                        <a href="/Products/DoubleSidedPcb" class="dropdown-item">Double Sided PCBs</a>
-                        <a href="/Products/MultilayerPcb" class="dropdown-item">Multilayer PCBs</a>
-                        <a href="/Products/MetalCorePcb" class="dropdown-item">Metal Core PCBs</a>
+                        <a href="/Products/Overview" class="dropdown-item">Overview</a>
+                        <a href="/Products/SingleSided" class="dropdown-item">Single Sided</a>
+                        <a href="/Products/DoubleSided" class="dropdown-item">Double Sided</a>
+                        <a href="/Products/Multilayer" class="dropdown-item">Multi-Layer</a>
+                        <a href="/Products/MetalCore" class="dropdown-item">Metal Core</a>
                     </div>
                 </div>
 
@@ -107,7 +107,7 @@
                     <a href="#" class="nav-link dropdown-toggle @(Context.Request.Path.StartsWithSegments("/Technologies") ? "active" : "")" data-bs-toggle="dropdown">Technologies</a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
                         <a href="/Technologies/Overview" class="dropdown-item">Overview</a>
-                       @*  <a href="/Technologies/SingleSide" class="dropdown-item">Single side</a>
+                        @*  <a href="/Technologies/SingleSide" class="dropdown-item">Single side</a>
                         <a href="/Technologies/DoubleSide" class="dropdown-item">Double Side</a>
                         <a href="/Technologies/Multilayer" class="dropdown-item">Multilayer</a>
                         <a href="/Technologies/MetalCore" class="dropdown-item">Metal Core</a> *@
@@ -128,73 +128,73 @@
 
                 <a href="/Career" class="nav-item nav-link @(Context.Request.Path == "/Career" ? "active" : "")">Career</a>
 
-                <a href="/Contact" class="nav-item nav-link @(Context.Request.Path == "/Contact" ? "active" : "")" ">Contact Us</a>
+                <a href="/Contact" class="nav-item nav-link @(Context.Request.Path == "/Contact" ? "active" : "")">Contact Us</a>
             </div>
         </div>
     </nav>
     <!-- Navbar End -->
-                @if (ViewData["PageTitle"] != null
+    @if (ViewData["PageTitle"] != null
     && Convert.ToString(ViewData["PageTitle"]) != "Home page")
-                {
-                    var pages = Convert.ToString(ViewData["PageTitle"])?.Split("/");
-                    var pageHeaderClass = "container-fluid py-5 mb-5 wow fadeIn page-header";
+    {
+        var pages = Convert.ToString(ViewData["PageTitle"])?.Split("/");
+        var pageHeaderClass = "container-fluid py-5 mb-5 wow fadeIn page-header";
 
-                    @if (ViewData["PageTitle"].ToString().Contains("About Us"))
-                    {
-                        pageHeaderClass = $"{pageHeaderClass} about-header";
-                    }
-                    else
-                    {
-                        pageHeaderClass = $"{pageHeaderClass} common-header";
-                    }
+        @if (ViewData["PageTitle"].ToString().Contains("About Us"))
+        {
+            pageHeaderClass = $"{pageHeaderClass} about-header";
+        }
+        else
+        {
+            pageHeaderClass = $"{pageHeaderClass} common-header";
+        }
 
         <!-- Page Header Start -->
 
         <div class="@pageHeaderClass" data-wow-delay="0.1s">
             <div class="container text-center py-5">
-                            @{
-                                if (Convert.ToString(ViewData["PageTitle"])?.IndexOf("/") > 0)
-                                {
+                @{
+                    if (Convert.ToString(ViewData["PageTitle"])?.IndexOf("/") > 0)
+                    {
                         <h1 class="display-4 text-white animated slideInDown mb-3">@pages[pages.Length - 1]</h1>
-                                }
-                                else
-                                {
+                    }
+                    else
+                    {
                         <h1 class="display-4 text-white animated slideInDown mb-3">@ViewData["PageTitle"]</h1>
-                                }
-                            }
+                    }
+                }
 
                 <nav aria-label="breadcrumb animated slideInDown">
                     <ol class="breadcrumb justify-content-center mb-0">
                         <li class="breadcrumb-item"><a class="text-white" href="/">Home</a></li>
-                                    @{
-                                        if (Convert.ToString(@ViewData["PageTitle"])?.IndexOf("/") > 0)
-                                        {
-                                            for (var i = 0; i < pages.Length; i++)
-                                            {
-                                                if (i == pages.Length - 1)
-                                                {
+                        @{
+                            if (Convert.ToString(@ViewData["PageTitle"])?.IndexOf("/") > 0)
+                            {
+                                for (var i = 0; i < pages.Length; i++)
+                                {
+                                    if (i == pages.Length - 1)
+                                    {
                                         <li class="breadcrumb-item text-primary active" aria-current="page">@pages[i]</li>
-                                                }
-                                                else
-                                                {
-                                        <li class="breadcrumb-item"><a class="text-white" href="#">@pages[i]</a></li>
-                                                }
-                                            }
-                                        }
-                                        else
-                                        {
-                                <li class="breadcrumb-item text-primary active" aria-current="page">@ViewData["PageTitle"]</li>
-                                        }
                                     }
+                                    else
+                                    {
+                                        <li class="breadcrumb-item"><a class="text-white" href="#">@pages[i]</a></li>
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                <li class="breadcrumb-item text-primary active" aria-current="page">@ViewData["PageTitle"]</li>
+                            }
+                        }
                     </ol>
                 </nav>
             </div>
         </div>
         <!-- Page Header End -->
-                }
+    }
 
     <div>
-                @RenderBody()
+        @RenderBody()
     </div>
 
     <!-- Footer Start -->
@@ -212,13 +212,13 @@
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <h5 class="text-light mb-4">Corporate Address</h5>
+                    <h5 class="text-light mb-4">Corporate Office Address</h5>
                     <p class="mb-2">109, Wing-II, Hans Bhawan,<br />Bahadurshah Zafar Marg,<br />New Delhi-110002</p>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h5 class="text-light mb-4">Quick Links</h5>
                     <a class="btn btn-link" href="/AboutUs/Overview">About Us</a>
-                    <a class="btn btn-link" href="/Products/PcbOverview">Products</a>
+                    <a class="btn btn-link" href="/Products/Overview">Products</a>
                     <a class="btn btn-link" href="/Investors/FinancialReports">Investors</a>
                     <a class="btn btn-link" href="/Career">Career</a>
                     <a class="btn btn-link" href="/Contact">Contact Us</a>
@@ -248,9 +248,9 @@
     <script src="~/lib/waypoints/waypoints.min.js"></script>
     <script src="~/lib/counterup/counterup.min.js"></script>
     <script src="~/lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="~/lib/lightbox/js/lightbox.min.js"></script>
-<!-- Template Javascript -->
-<script src="~/js/main.js"></script>
-        @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/lib/lightbox/js/lightbox.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
